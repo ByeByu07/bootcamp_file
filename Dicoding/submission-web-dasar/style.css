@@ -1,0 +1,396 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Quicksand:wght@400;500&family=Roboto+Condensed:wght@300&display=swap");
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body {
+    background-color: #edf2f4;
+    font-family: "Roboto", sans-serif;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    background-color: #003049;
+    box-shadow: 0 3px 100px #000;
+    z-index: 999;
+}
+
+footer {
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    background-color: #003049;
+    line-height: 4;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+}
+
+.red {
+    color: red;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+}
+
+.nav-title {
+    color: #c1121f;
+    font-size: 1.5rem;
+    text-shadow: 3px 3px 3px #780000;
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu a {
+    padding: 1rem;
+    color: #669bbc;
+}
+
+.login {
+    transition: 0.5s ease;
+    background-color: rgba(225, 225, 225, 0.9);
+    border-radius: 10px;
+    border: 1px solid rgba(225, 225, 225, 0.9);
+}
+
+.login:hover {
+    color: white;
+    background-color: transparent;
+    border: 1px solid rgba(225, 225, 225, 0.9);
+}
+
+.container {
+    width: 100%;
+    padding: 1.25rem;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.line {
+    width: 100%;
+}
+
+.left {
+    width: 70%;
+    padding: 10px;
+    /* box-shadow: 5px 5px 8px #000, -3px -3px 8px #000; */
+    border-radius: 10px;
+}
+
+.right {
+    position: sticky;
+    top: 5.49rem;
+    width: 30%;
+    padding: 20px;
+    height: fit-content;
+    /* background-color: #edf2f4; */
+    background-color: #fb8500;
+    box-shadow: 5px 5px 8px #000, -3px -3px 8px #000;
+}
+
+
+/* .right aside {
+    padding: 10px;
+} */
+
+.right header {
+    text-align: center;
+}
+
+.right table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2rem 0.1rem;
+}
+
+.left .about {
+    display: flex;
+    justify-content: center;
+    padding: 13rem 0;
+    border-radius: 20px;
+    background-color: #669bbc;
+    margin: 4rem 0;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.left .about h2 {
+    font-size: 6rem;
+    letter-spacing: 10px;
+}
+
+.left .about p {
+    font-size: 1.75rem;
+}
+
+.search-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    /* background-color: #8d99ae; */
+    padding: 2rem 1rem;
+    border-radius: 10px;
+}
+
+.search-q {
+    padding: 10px;
+    background-color: #ffb703;
+    font-size: large;
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 0.5rem;
+    outline: none;
+    margin-right: 5px;
+}
+
+
+/* atur width img 100% */
+
+.img-50 {
+    width: 50%;
+}
+
+.img-100 {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/*----x----- atur width img 100% ----x----*/
+
+
+/*----- atur flex basis-----*/
+
+.basis-22 {
+    flex-basis: 22%;
+}
+
+.basis-25 {
+    flex-basis: 25%;
+}
+
+.basis-33 {
+    flex-basis: 33.3%;
+}
+
+.basis-50 {
+    flex-basis: 50%;
+}
+
+.basis-75 {
+    flex-basis: 75%;
+}
+
+.basis-100 {
+    flex-basis: 100%;
+}
+
+
+/*--x--- atur flex basis---x--*/
+
+table {
+    gap: 20px;
+}
+
+.profile img {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.jumbotron {
+    position: relative;
+    padding: 1rem;
+}
+
+.next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+.next:hover {
+    transition: shakeNext 0.5s ease;
+}
+
+.prev {
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+.prev:hover {
+    transition: shakePrev 0.5s ease;
+}
+
+.button-slider {
+    padding: 2rem 1rem;
+    transition: 1s ease;
+}
+
+.button-slider:hover {
+    background-color: #cfcfcf;
+}
+
+.dropdown {
+    position: relative;
+    text-align: center;
+}
+
+.drop-content {
+    position: absolute;
+    display: none;
+    margin: 1.7rem 0;
+    padding: 5px;
+    z-index: 2;
+    background-color: pink;
+    width: 200px;
+    transition: 0.5s ease;
+}
+
+.drop {
+    display: block;
+}
+
+.drop-content a {
+    display: block;
+    /* padding: 2px; */
+}
+
+.drop-content a:hover {
+    background-color: #e0e0e0;
+}
+
+.left-content article {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.left-content label {
+    text-align: start;
+    margin-bottom: 5px;
+}
+
+.focus:focus {
+    transition: 1s ease;
+    outline: #c1121f 1px solid;
+}
+
+.left-content h1 {
+    font-size: 2.2rem;
+}
+
+.title {
+    display: block;
+    font-size: 2rem;
+    margin-top: 15rem;
+    background-color: #ffb703;
+    padding: 1rem;
+    border-radius: 20px 20px 0 0;
+}
+
+.coming-soon {
+    opacity: 50%;
+    background-color: rgba(225, 225, 225, 0.8);
+    padding: 1rem;
+    box-shadow: 2px 2px 2px #000 inset, -2px -2px 2px #000 inset;
+}
+
+.soon {
+    margin: 0rem 10rem;
+}
+
+.dota-wrap {
+    box-shadow: 2px 2px 2px #000 inset, -2px -2px 2px #000 inset;
+    padding: 3rem 0;
+}
+
+.output-dota {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.output-dota table {
+    flex-basis: 100%;
+    padding: 10px;
+    background-color: #ad101b;
+    color: rgba(225, 225, 225, 0.9);
+}
+
+.output-dota th {
+    padding: 10px;
+}
+
+.news h4 {
+    letter-spacing: 10px;
+    padding: 1rem 0;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #000;
+}
+
+.top-player-dota {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-player-dota table {
+    flex-basis: 100%;
+}
+
+
+/* responsive section */
+
+@media screen and (max-width: 900px) {
+    .left {
+        width: 100%;
+    }
+    .right {
+        width: 100%;
+    }
+    .nav-title {
+        font-size: 1.25rem;
+    }
+    .menu {
+        display: none;
+    }
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .left .about {
+        padding: 3.5rem 0;
+        text-align: center;
+    }
+    .left .about h2 {
+        font-size: 2rem;
+        letter-spacing: 10px;
+    }
+}

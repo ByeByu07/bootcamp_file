@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./main.js" defer></script>
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <title>SeeUGame</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <div class="nav-title">
+                <h1>SeeUGame</h1>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <div class="dropdown">
+                            <a class="drop-btn">Game
+                  <img src="./icons/icons8-down-16.png" alt="" srcset="" />
+                </a>
+                            <div class="drop-content">
+                                <a href="#coc">Dota 2</a>
+                                <a href="#bw">Brawl Stars</a>
+                                <a href="#valo">Valorant</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Feature</a></li>
+                    <li><a href="#about">About </a></li>
+                    <li><a href="#" class="login">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="left">
+                <div class="jumbotron">
+                    <button class="next button-slider">></button>
+                    <button class="prev button-slider"><</button>
+                    <img src="./img/1.jpg" alt="" srcset="" class="img-100" id="slider-img" />
+                    <span id="about"></span>
+                </div>
+                <div class="about">
+                    <article>
+                        <header>
+                            <h2>SeeUGame</h2>
+                        </header>
+                        <section>
+                            <p>Pantau rivalmu dengan website kami.</p>
+                            <p>Masukkan keywordmu , kalahkan musuhmu</p>
+                        </section>
+                    </article>
+                    <span id="coc"></span>
+                </div>
+                <div class="left-content">
+                    <article class="dota-wrap">
+                        <header>
+                            <h1>Dota 2</h1>
+                        </header>
+                        <section>
+                            <div class="search-wrap line">
+                                <div class="search-q">Cari Player Dota</div>
+                                <label for="tag" class="basis-100">Nama Player</label>
+                                <input type="search" name="" class="basis-75 focus dota" id="tag" />
+                                <button type="submit" class="basis-22 submit-dota">
+                    Search
+                  </button>
+                            </div>
+                            <div class="output-dota"></div>
+                        </section>
+                    </article>
+                    <article class="news">
+                        <header class="title">
+                            <h2>News</h2>
+                        </header>
+                        <section>
+                            <h4>TOP 10 Pro Player Dota</h4>
+                            <div class="top-player-dota"></div>
+                        </section>
+                    </article>
+                    <article>
+                        <header class="title">
+                            <h2>Coming Soon</h2>
+                        </header>
+                    </article>
+                    <article class="coming-soon">
+                        <header>
+                            <h1 id="bw">Brawl Stars</h1>
+                        </header>
+                        <section>
+                            <div class="search-wrap line">
+                                <input type="search" name="" class="basis-75" readonly />
+                                <button type="submit" class="basis-22">Search</button>
+                            </div>
+                        </section>
+                    </article>
+                    <article class="coming-soon">
+                        <header>
+                            <h1 id="valo">Valorant</h1>
+                        </header>
+                        <section>
+                            <div class="search-wrap line">
+                                <input type="search" name="" class="basis-75" readonly />
+                                <button type="submit" class="basis-22">Search</button>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+                <!-- <div class="search-wrap line">
+                    <input type="search" name="" class="basis-75" />
+                    <button type="submit" class="basis-25">Search</button>
+                </div> -->
+            </div>
+            <div class="right">
+                <aside>
+                    <article>
+                        <header class="profile">
+                            <img src="./profile/profile.jpeg" alt="" srcset="" />
+                        </header>
+                        <section>
+                            <table>
+                                <tr>
+                                    <th>Nama</th>
+                                    <td>:</td>
+                                    <td>M. Baharuddin Yusuf</td>
+                                </tr>
+                                <tr>
+                                    <th>Usia</th>
+                                    <td>:</td>
+                                    <td>19 Tahun</td>
+                                </tr>
+                                <tr>
+                                    <th>Alamat</th>
+                                    <td>:</td>
+                                    <td>Purwodadi - Pasuruan</td>
+                                </tr>
+                                <tr>
+                                    <th>Hobby</th>
+                                    <td>:</td>
+                                    <td>Berharap</td>
+                                </tr>
+                                <tr>
+                                    <th>Status</th>
+                                    <td>:</td>
+                                    <td>Belum Kawin</td>
+                                </tr>
+                            </table>
+                        </section>
+                    </article>
+                </aside>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <span>Made With <span class="red">❤</span> by M. Baharuddin Yusuf</span>
+    </footer>
+</body>
+
+</html>
