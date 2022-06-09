@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./main.js" defer></script>
+</head>
+
+<body>
+    <nav>
+        <header>
+            <h1>Bookshelf App</h1>
+        </header>
+    </nav>
+    <main>
+        <div class="wrapper">
+            <article class="addBook wrap-item">
+                <h1>Masukkan Buku Baru</h1>
+                <section>
+                    <form action="#">
+                        <div class="form-item">
+                            <label for="title">Title</label>
+                            <input type="text" id="title" />
+                        </div>
+                        <div class="form-item">
+                            <label for="penulis">Writer</label>
+                            <input type="text" id="penulis" />
+                        </div>
+                        <div class="form-item">
+                            <label for="tahun">Year</label>
+                            <input type="number" id="tahun" />
+                        </div>
+                    </form>
+                    <label for="check" class="margin-2 label-checkbox">
+              Sudah Dibaca ?
+              <input type="checkbox" name="" id="checkbox" />
+            </label>
+                    <div class="margin-2">
+                        <button class="submit-add">
+                Masukkan Buku ke rak Belum Selesai Dibaca
+              </button>
+                    </div>
+                </section>
+            </article>
+            <article class="searchBook wrap-item">
+                <h1>Cari Buku</h1>
+                <form action="#" class="form-item-search">
+                    <label for="title-search">Title</label>
+                    <input type="search" name="search" id="search" />
+                    <input type="submit" value="Search" id="submit-search
+                    " />
+                </form>
+            </article>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
