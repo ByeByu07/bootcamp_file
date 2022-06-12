@@ -173,6 +173,7 @@ window.onclick = (e) => {
     saveToLocal();
   }
   if (class1 == "delete") {
+    alert("Yakin mau dihapus ??");
     const index = allBook.forEach((book, i) => {
       if (book.id == id) {
         return i;
