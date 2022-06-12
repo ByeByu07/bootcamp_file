@@ -24,6 +24,10 @@ article h1 {
     margin: 3rem 0;
 }
 
+main {
+    margin-bottom: 10rem;
+}
+
 .form-item {
     display: flex;
     margin: 30px 0;
@@ -41,14 +45,18 @@ article h1 {
 .wrapper {
     display: flex;
     flex-flow: wrap row;
+    justify-content: center;
+}
+
+.wrapper article {
+    /* border: 1px solid #000; */
+    /* padding: 3rem; */
 }
 
 .wrap-item {
     flex-basis: 50%;
     text-align: center;
-    padding: 4rem 0;
-    /* border: 1px solid #000; */
-    padding: 5rem 1rem;
+    padding: 1rem;
 }
 
 .searchBook {}
@@ -63,12 +71,12 @@ article h1 {
 }
 
 #search {
-    flex-basis: 80%;
+    flex-basis: 100%;
     padding: 0.4rem 0;
 }
 
-#submit-search {
-    flex-basis: 20%;
+.input {
+    width: 100%;
     padding: 0.4rem 0;
 }
 
@@ -82,8 +90,8 @@ article h1 {
     height: 20px;
 }
 
-.margin-2 {
-    margin: 2rem 0;
+.margin-1 {
+    margin: 1rem 0;
 }
 
 .label-checkbox {
@@ -92,4 +100,29 @@ article h1 {
     justify-content: center;
     gap: 10px;
     background-color: rgba(225, 225, 225, 0.9);
+}
+
+.item-list {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.listBook header {
+    text-align: center;
+}
+
+.item-list section {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.item-list button {
+    padding: 1rem 0;
+    width: 200px;
+}
+
+.item-book {
+    margin: 20px;
+    padding: 10px;
+    background-color: rgb(2, 255, 255);
 }

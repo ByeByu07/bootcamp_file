@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bookshelf App</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="./main.js" defer></script>
+
 </head>
 
 <body>
@@ -21,28 +21,27 @@
             <article class="addBook wrap-item">
                 <h1>Masukkan Buku Baru</h1>
                 <section>
-                    <form action="#">
+                    <form action="#" id="form">
                         <div class="form-item">
                             <label for="title">Title</label>
-                            <input type="text" id="title" />
+                            <input type="text" id="judul" name="judul" required />
                         </div>
                         <div class="form-item">
                             <label for="penulis">Writer</label>
-                            <input type="text" id="penulis" />
+                            <input type="text" id="penulis" name="penulis" required/>
                         </div>
                         <div class="form-item">
                             <label for="tahun">Year</label>
-                            <input type="number" id="tahun" />
+                            <input type="number" id="tahun" name="tahun" required/>
                         </div>
-                    </form>
-                    <label for="check" class="margin-2 label-checkbox">
+
+                        <label for="check" class="margin-1 label-checkbox">
               Sudah Dibaca ?
-              <input type="checkbox" name="" id="checkbox" />
+              <input type="checkbox" name="" id="checkbox"/>
             </label>
-                    <div class="margin-2">
-                        <button class="submit-add">
-                Masukkan Buku ke rak Belum Selesai Dibaca
-              </button>
+                        <div class="margin-2">
+                            <input type="submit" class="submit-add" value=" Masukkan Buku ke rak Belum Selesai Dibaca">
+                    </form>
                     </div>
                 </section>
             </article>
@@ -50,14 +49,30 @@
                 <h1>Cari Buku</h1>
                 <form action="#" class="form-item-search">
                     <label for="title-search">Title</label>
-                    <input type="search" name="search" id="search" />
-                    <input type="submit" value="Search" id="submit-search
-                    " />
+                    <input type="search" name="search" id="search" placeholder="Mencari Buku? Masukkan Judul yaa" />
+                    <!-- <input type="submit" value="Search" id="submit-search
+                    " /> -->
                 </form>
             </article>
         </div>
+        <article class="listBook">
+            <header>
+                <h1>List Book</h1>
+            </header>
+            <div class="item-list">
+                <section class="belum-baca">
+                    <button id="belum">Belum Dibaca</button>
+                    <div class="output-belum"></div>
+                </section>
+                <section class="sudah-baca">
+                    <button id="sudah">Sudah Dibaca</button>
+                    <div class="output-sudah"></div>
+                </section>
+            </div>
+        </article>
     </main>
     <footer></footer>
+    <script src="./main.js"></script>
 </body>
 
 </html>
