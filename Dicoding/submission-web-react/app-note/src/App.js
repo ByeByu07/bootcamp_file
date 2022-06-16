@@ -76,61 +76,105 @@ function App() {
   };
 
   if (ArsipScreen) {
-    return (
-      <main>
-        <Navbar
-          valueNavbar={false}
-          setArsipScreen={setArsipScreen}
-          textNavbar={"Kembali"}
-          setSearch={setSearch}
-        />
-        <Arsip />
-        <section className="listnote__container">
-          {Note.map((note) => (
-            <ListNoteArsip
-              key={note.id}
-              {...note}
-              toggleArchived={toggleArchived}
-              deleteObject={deleteObject}
-              search={search}
-            />
-          ))}
-        </section>
-      </main>
-    );
+    if (Note.find((note) => note.archived == true)) {
+      return (
+        <main>
+          <Navbar
+            valueNavbar={false}
+            setArsipScreen={setArsipScreen}
+            textNavbar={"Kembali"}
+            setSearch={setSearch}
+          />
+          <Arsip />
+          <section className="listnote__container">
+            {Note.map((note) => (
+              <ListNoteArsip
+                key={note.id}
+                {...note}
+                toggleArchived={toggleArchived}
+                deleteObject={deleteObject}
+                search={search}
+              />
+            ))}
+          </section>
+        </main>
+      );
+    } else {
+      return (
+        <main>
+          <Navbar
+            valueNavbar={false}
+            setArsipScreen={setArsipScreen}
+            textNavbar={"Kembali"}
+            setSearch={setSearch}
+          />
+          <Arsip />
+          <section className="center">
+            <h2>Tidak ada catatan</h2>
+          </section>
+        </main>
+      );
+    }
   } else {
-    return (
-      <main>
-        <Navbar
-          setArsipScreen={setArsipScreen}
-          valueNavbar={true}
-          textNavbar={"Arsip"}
-          setSearch={setSearch}
-        />
-        <AddNote
-          titleInput={titleInput}
-          bodyInput={bodyInput}
-          setTitleInput={setTitleInput}
-          setBodyInput={setBodyInput}
-          submitForm={submitForm}
-          limit={limit}
-          limiterInput={limiterInput}
-          readOnly={readOnly}
-          readOnlyFunction={readOnlyFunction}
-        />
-        <section className="listnote__container">
-          {Note.map((note) => (
-            <ListNote
-              key={note.id}
-              {...note}
-              toggleArchived={toggleArchived}
-              deleteObject={deleteObject}
-              search={search}
-            />
-          ))}
-        </section>
-      </main>
-    );
+    if (Note.find((note) => note.archived == false)) {
+      return (
+        <main>
+          <Navbar
+            setArsipScreen={setArsipScreen}
+            valueNavbar={true}
+            textNavbar={"Arsip"}
+            setSearch={setSearch}
+          />
+          <AddNote
+            titleInput={titleInput}
+            bodyInput={bodyInput}
+            setTitleInput={setTitleInput}
+            setBodyInput={setBodyInput}
+            submitForm={submitForm}
+            limit={limit}
+            limiterInput={limiterInput}
+            readOnly={readOnly}
+            readOnlyFunction={readOnlyFunction}
+          />
+          <section className="listnote__container">
+            {Note.map((note) => (
+              <ListNote
+                key={note.id}
+                {...note}
+                toggleArchived={toggleArchived}
+                deleteObject={deleteObject}
+                search={search}
+              />
+            ))}
+          </section>
+        </main>
+      );
+    } else {
+      return (
+        <main>
+          <Navbar
+            setArsipScreen={setArsipScreen}
+            valueNavbar={true}
+            textNavbar={"Arsip"}
+            setSearch={setSearch}
+          />
+          <AddNote
+            titleInput={titleInput}
+            bodyInput={bodyInput}
+            setTitleInput={setTitleInput}
+            setBodyInput={setBodyInput}
+            submitForm={submitForm}
+            limit={limit}
+            limiterInput={limiterInput}
+            readOnly={readOnly}
+            readOnlyFunction={readOnlyFunction}
+          />
+          <section className="center">
+            <h2>Tidak ada catatan</h2>
+          </section>
+        </main>
+      );
+    }
   }
 }
 
